@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    width: 40%;
+    position: relative;
+    background-image: url("../images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left {
+    height: 550px;
+    width: 498px;
+    position: absolute;
+    right: -150px;
+    color: rgb(222, 221, 223);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.front {
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 447px;
+    height: 245px;
+    padding: 20px;
+}
+
+.number {
+    font-size: 30px;
+    letter-spacing: .2rem;
+    font-weight: 500;
+    margin: 75px 0 20px;
+}
+
+.name-exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 447px;
+    height: 245px;
+    padding: 110px 55px;
+    text-align: right;
+    align-self: flex-end;
+}
+
+
+
+.form {
+    position: relative;
+    width: 40%;
+}
+
+.right {
+    position: absolute;
+    height: 300px;
+    width: 442px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+}
+
+input {
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+#card-holder,
+#card-number,
+#cvc {
+    width: 100%;
+    border-color: hsl(270, 3%, 87%);
+    border-width: 1px;
+    padding: 10px;
+}
+
+#mm,
+#yy {
+    width: 40%;
+    border-color: hsl(270, 3%, 87%);
+    border-width: 1px;
+    padding: 10px;
+}
+
+#confirm {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+}
+
+.date-cvc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.error {
+    display: none;
+}
+
+.show {
+    display: block;
+    color: hsl(0, 100%, 66%);
+}
