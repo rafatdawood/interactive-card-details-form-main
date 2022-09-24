@@ -94,36 +94,65 @@ label {
 
 input {
     border-radius: 5px;
-
+    margin: 5px 0;
 }
 
 #card-holder,
 #card-number,
 #cvc {
     width: 100%;
-    border-color: hsl(270, 3%, 87%);
-    border-width: 1px;
+    border: 2px solid hsl(270, 3%, 87%);
     padding: 10px;
+    outline: none;
 }
 
 #mm,
 #yy {
-    width: 40%;
-    border-color: hsl(270, 3%, 87%);
-    border-width: 1px;
+    width: 100%;
+    border: 2px solid hsl(270, 3%, 87%);
     padding: 10px;
+    outline: none;
+}
+
+#card-holder:focus,
+#card-number:focus,
+#cvc:focus,
+#mm:focus,
+#yy:focus {
+    outline: linear-gradient(to right, darkblue, darkorchid) 2;
+}
+
+.a {
+    display: flex;
+}
+
+.yy {
+    width: 45%;
+    display: inline-block;
+}
+
+.mm {
+    width: 45%;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 #confirm {
     width: 100%;
     padding: 15px 0;
     border: none;
+    margin-top: 20px;
     color: hsl(0, 0%, 100%);
     background-color: hsl(278, 68%, 11%);
 }
 
 .date-cvc {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2.6fr auto;
     grid-template-rows: 1fr;
+}
+
+.error {
+    display: none;
+    color: hsl(0, 100%, 66%);
 }
